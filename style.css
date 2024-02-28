@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  background-color: rgb(229, 229, 229);
+  min-height: 100vh;
+  min-width: 100vh;
+  
+}
+
+.card {
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  width: 100%;
+  width: 350px;
+  max-width: 470px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  background: white;
+  position: fix;
+  right: 0;
+  left:0;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(124, 124, 124, 0.2); /* Shadow properties */
+}
+.bar h1
+{ 
+  margin: 10px;
+
+}
+
+.addBtn {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  padding: 15px;
+  border-radius: 30px;
+  text-align: center;
+  justify-content: center;
+  margin : 40px auto 0 ;
+  display: flex;
+  background: transparent ;
+  font-weight: 600;
+  transition: filter 0.15s ease-in-out;
+
+}
+.addBtn:hover
+{
+  background: rgb(206, 206, 206);
+  filter: brightness(90%);
+}
+.card p {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.card .infos input {
+  border: none;
+  outline: none;
+  background: #ebe9e9;
+  border-radius: 15px;
+  padding: 10px 10px;
+  margin: 15px;
+  width: 300px;
+  font-size: 22px;
+  
+  
+}
+.card button
+{
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: rgb(116, 170, 231);
+    color: white;
+    width: 200px;
+  
+}
+
+
+
+.library
+{
+    display: flex;
+    margin: 30px;
+    
+
+}
+.overlay
+{
+  background:rgb(0, 0, 0,0.6) ;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 2;
+  display: none;
+  
+}
+
+
+.read-div 
+{
+  display: flex;
+}
+
+.read-div input
+{
+  margin-left: 10px ;
+  margin-bottom: 5px;
+  
+}
+.bookcard .readbtn {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+  margin: 15px;
+  height: 50px;
+  font-size: 20px;
+}
+.bookcard .removebtn
+{
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70%;
+  height: 50px;
+  font-size: 20px;
+}
+.bookcard .readbtn.read {
+  background-color: green;
+  color: white;
+}
+
+.bookcard .readbtn.not-read {
+  background-color: #ff9c9c;
+  color: white;
+}
+.bookcard
+{
+    margin: 18px;
+    padding: 30px;
+    width: 350px;
+    
+    height: 80%;
+    max-height: 400px;
+    background: #fff;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    
+
+}
+.library
+{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    gap: 50px;
+  
+}
+
+@media (max-width: 767px) {
+  .library {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .bookcard {
+    width: 100%;
+  }
+}
+
